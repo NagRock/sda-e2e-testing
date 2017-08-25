@@ -14,7 +14,7 @@ describe('sum', () => {
     done();
   });
 
-  it('should sum two numbers', async (done) => {
+  it('should sum two numbers', async () => {
     changeCalculationsTo('Dodawanie');
     const firstInput = element.all(by.tagName('input')).first();
     const secondInput = element.all(by.tagName('input')).get(1);
@@ -30,6 +30,5 @@ describe('sum', () => {
     const resultContainer = element(by.className('result'));
     const resultText = await resultContainer.getText();
     expect('30').toEqual(resultText);
-    done();
   });
 });
